@@ -153,10 +153,23 @@
     letter-spacing:.16em;text-transform:uppercase;color:var(--gris);
     display:block;margin-bottom:.7rem;
   }
-  .dia ul{list-style:none;display:grid;gap:.45rem;font-size:.93rem}
-  .dia li{padding-left:1rem;position:relative}
-  .dia li::before{content:"";position:absolute;left:0;top:.55em;width:.35rem;height:.35rem;background:var(--gris);border-radius:50%}
-  .dia .hora{font-family:"Archivo",sans-serif;font-weight:600;color:var(--gris);font-size:.82rem}
+  .dia ul{list-style:none;display:grid;gap:.55rem;font-size:.9rem}
+  .dia li{
+    display:flex;flex-direction:column;gap:.25rem;
+    background:var(--gris-suave);
+    border:1px solid #E4DED8;
+    border-radius:.4rem;
+    padding:.6rem .75rem;
+  }
+  .dia li::before{display:none}
+  .dia li .hora{
+    display:inline-block;align-self:flex-start;
+    background:var(--guinda);color:var(--blanco);
+    font-family:"Archivo",sans-serif;font-weight:700;font-size:.72rem;
+    letter-spacing:.04em;
+    padding:.15rem .55rem;border-radius:.25rem;
+  }
+  .dia li strong{color:var(--guinda)}
 
   /* ---------- Pósteres ---------- */
   .tarjeta-poster{
@@ -321,7 +334,7 @@
       <li>
         <span class="cuando">Hasta el 17 de agosto</span>
         <span class="que">Envío del póster (solo para la modalidad presencial)</span>
-        <p class="detalle">Sube la información de tu póster en el formulario de inscripción indicando título del poster, autores, adscripción, departamento, dirección, correo electrónico, área temática, palabras clave, resumen (300 palabras máximo) y agradecimientos. Habrá premios para los mejores posters presentados.</p>
+        <p class="detalle">Sube la información de tu póster en el formulario de inscripción indicando título del poster, autores, adscripción, departamento, dirección, correo electrónico, área temática, palabras clave, resumen (300 palabras máximo) y agradecimientos.</p>
       </li>
       <li>
         <span class="cuando">Hasta el 20 de agosto</span>
@@ -348,43 +361,43 @@
     <div class="dias">
       <article class="dia">
         <span class="fecha-dia">Lunes 24 de agosto</span>
-        <h3>Día 1 · Turbulencia: Simulación y arte</h3>
+        <h3>Día 1 · Turbulencia: simulación y arte</h3>
         <ul>
-          <li><span class="hora">08:00 – 08:40</span> &middot; Registro</li>
-          <li><span class="hora">08:40 – 09:00</span> &middot; Inauguración del evento</li>
-          <li><span class="hora">09:00 – 10:00</span> &middot; Conferencia magistral: <strong> Dr. Isaías Emmanuel Garduño Olvera </strong> - De la reología computacional a la oceanografía: Retos de modelar turbulencia en distintos regímenes de flujo</li>
-          <li><span class="hora">10:00 – 11:00</span> &middot; Conferencia magistral: <strong> Profa. Malinalli Wong Rueda </strong> - La física en el arte: aportaciones de Leonardo da Vinci, Van Gogh y Pollock en el área de la dinámica de fluidos</li>
-          <li><span class="hora">11:00 – 12:00</span> &middot; Conferencia magistral: <strong> Dr. Héctor Miguel Mejía Díaz </strong> - Técnicas numéricas para la simulación de inestabilidades hidrodinámicas</li>
-          <li><span class="hora">12:00 – 13:00</span> &middot; Receso</li>
-          <li><span class="hora">13:00 – 15:00</span> &middot; Taller: <strong> Dra. Martha Angelica Cano Figueroa y Dr. Hugo Arcos Gutierrez </strong> - Taller práctico de CFD: Modelado y simulación de fenómenos turbulentos con DesignModeler y Fluent</li>
-          <li><span class="hora">15:00 – 16:30</span> &middot; Exposición de posters científicos</li>
+          <li><span class="hora">08:00 – 08:40</span> Registro</li>
+          <li><span class="hora">08:40 – 09:00</span> Inauguración del evento</li>
+          <li><span class="hora">09:00 – 10:00</span> Conferencia magistral: <strong>Dr. Isaías Emmanuel Garduño Olvera</strong> — De la reología computacional a la oceanografía: retos de modelar turbulencia en distintos regímenes de flujo</li>
+          <li><span class="hora">10:00 – 11:00</span> Conferencia magistral: <strong>Profa. Malinalli Wong Rueda</strong> — La física en el arte: aportaciones de Leonardo da Vinci, Van Gogh y Pollock en el área de la dinámica de fluidos</li>
+          <li><span class="hora">11:00 – 12:00</span> Conferencia magistral: <strong>Dr. Héctor Miguel Mejía Díaz</strong> — Técnicas numéricas para la simulación de inestabilidades hidrodinámicas</li>
+          <li><span class="hora">12:00 – 13:00</span> Receso</li>
+          <li><span class="hora">13:00 – 15:00</span> Taller: <strong>Dra. Martha Angélica Cano Figueroa y Dr. Hugo Arcos Gutiérrez</strong> — Taller práctico de CFD: modelado y simulación de fenómenos turbulentos con DesignModeler y Fluent</li>
+          <li><span class="hora">15:00 – 16:30</span> Exposición de pósteres científicos</li>
         </ul>
       </article>
       <article class="dia">
         <span class="fecha-dia">Martes 25 de agosto</span>
         <h3>Día 2 · Física estructural y sistemas complejos</h3>
         <ul>
-          <li><span class="hora">08:00 – 09:00</span> &middot; Registro</li>
-          <li><span class="hora">09:00 – 10:00</span> &middot; Conferencia magistral: <strong> Dr. Efraín Carpintero Moreno </strong> - Simulación numérica de alta fidelidad mediante smoothed particle hydrodynamics (SPH) para energías renovables marinas</li>
-          <li><span class="hora">10:00 – 11:00</span> &middot; Conferencia magistral: <strong> Dra. Martha Angélica Cano Figueroa </strong> - Patrones estacionales del oleaje en costas mexicanas: análisis estadístico de la frecuencia y la altura de ola</li>
-          <li><span class="hora">11:00 – 12:00</span> &middot; Conferencia magistral: Prof. Gerardo García Naumis</li>
-          <li><span class="hora">12:00 – 13:00</span> &middot; Receso</li>
-          <li><span class="hora">13:00 – 15:00</span> &middot; Taller: <strong> Ing. Braulio Rentería Ramírez </strong> — Pulsorreactores y genómenos termoacústicos</li>
-          <li><span class="hora">15:00 – 16:30</span> &middot; Exposición de posters científicos</li>
+          <li><span class="hora">08:00 – 09:00</span> Registro</li>
+          <li><span class="hora">09:00 – 10:00</span> Conferencia magistral: <strong>Dr. Efraín Carpintero Moreno</strong> — Simulación numérica de alta fidelidad mediante Smoothed Particle Hydrodynamics (SPH) para energías renovables marinas</li>
+          <li><span class="hora">10:00 – 11:00</span> Conferencia magistral: <strong>Dra. Martha Angélica Cano Figueroa</strong> — Patrones estacionales del oleaje en costas mexicanas: análisis estadístico de la frecuencia y la altura de ola</li>
+          <li><span class="hora">11:00 – 12:00</span> Conferencia magistral: <strong>Prof. Gerardo García Naumis</strong></li>
+          <li><span class="hora">12:00 – 13:00</span> Receso</li>
+          <li><span class="hora">13:00 – 15:00</span> Taller: <strong>Ing. Braulio Rentería Ramírez</strong> — Pulsorreactores y fenómenos termoacústicos</li>
+          <li><span class="hora">15:00 – 16:30</span> Exposición de pósteres científicos</li>
         </ul>
       </article>
       <article class="dia">
         <span class="fecha-dia">Miércoles 26 de agosto</span>
         <h3>Día 3 · Inestabilidades y patrones turbulentos</h3>
         <ul>
-          <li><span class="hora">08:00 – 09:00</span> &middot; Registro</li>
-          <li><span class="hora">09:00 – 10:00</span> &middot; Conferencia magistral: Dr. Carlos Echeverria Arjonilla</li>
-          <li><span class="hora">10:00 – 11:00</span> &middot; Conferencia magistral: Dr. Antonio de Jesus Flores Moreno </li>
-          <li><span class="hora">11:00 – 12:00</span> &middot; Conferencia magistral:  <strong> Dra. Elsa María de la Calleja Mora </strong> - Topológica de estructuras turbulentas; números de Betti y entropía </li>
-          <li><span class="hora">12:00 – 12:40</span> &middot; Receso</li>
-          <li><span class="hora">13:00 – 15:00</span> &middot; Taller: <strong> Mtro. Julio César Sánchez Jiménez</strong> — Simulación hidrodinámica de absorbedores puntuales para la generación de energía undimotriz</li>
-          <li><span class="hora">15:00 – 16:00</span> &middot; Evaluación y premiación de posters</li>
-          <li><span class="hora">16:00 – 16:30</span> &middot; Cierre del evento</li>
+          <li><span class="hora">08:00 – 09:00</span> Registro</li>
+          <li><span class="hora">09:00 – 10:00</span> Conferencia magistral: <strong>Dr. Carlos Echeverría Arjonilla</strong></li>
+          <li><span class="hora">10:00 – 11:00</span> Conferencia magistral: <strong>Dr. Antonio de Jesús Flores Moreno</strong></li>
+          <li><span class="hora">11:00 – 12:00</span> Conferencia magistral: <strong>Dra. Elsa María de la Calleja Mora</strong> — Topología de estructuras turbulentas: números de Betti y entropía</li>
+          <li><span class="hora">12:00 – 12:40</span> Receso</li>
+          <li><span class="hora">13:00 – 15:00</span> Taller: <strong>Mtro. Julio César Sánchez Jiménez</strong> — Simulación hidrodinámica de absorbedores puntuales para la generación de energía undimotriz</li>
+          <li><span class="hora">15:00 – 16:00</span> Evaluación y premiación de pósteres</li>
+          <li><span class="hora">16:00 – 16:30</span> Cierre del evento</li>
         </ul>
       </article>
     </div>
