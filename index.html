@@ -272,9 +272,53 @@
   .marca{display:flex;align-items:center;gap:.55rem}
   .logo-nav{height:26px;width:auto;display:block}
   #posteres p{text-align:justify}
+
+.modal-fondo{
+    position:fixed;inset:0;z-index:1000;
+    background:rgba(38,32,35,.72);
+    display:flex;align-items:center;justify-content:center;
+    padding:1.5rem;
+  }
+  .modal-fondo.oculto{display:none}
+  .modal-caja{
+    background:var(--blanco);
+    max-width:520px;width:100%;
+    border-radius:.7rem;border-top:6px solid var(--guinda);
+    padding:2.4rem 2rem 2rem;text-align:center;
+    position:relative;
+    box-shadow:0 20px 60px rgba(38,32,35,.4);
+  }
+  .modal-icono{font-size:2.4rem;margin-bottom:.4rem}
+  .modal-caja h2{color:var(--guinda);font-size:1.4rem;margin-bottom:.6rem}
+  .modal-caja .modal-sub{
+    font-family:"Archivo",sans-serif;font-weight:700;
+    font-size:.95rem;color:var(--gris);margin-bottom:1rem;
+  }
+  .modal-caja p{font-size:1rem;margin-bottom:1rem;text-align:justify}
+  .modal-caja .btn{margin-top:.5rem}
+  .modal-cerrar{
+    position:absolute;top:.8rem;right:1rem;
+    background:none;border:none;cursor:pointer;
+    font-size:1.8rem;line-height:1;color:var(--gris);
+  }
+  .modal-cerrar:hover{color:var(--guinda)}
+
+  
 </style>
 </head>
 <body>
+
+<div id="modal-aviso" class="modal-fondo">
+  <div class="modal-caja" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+    <button class="modal-cerrar" onclick="cerrarAviso()" aria-label="Cerrar aviso">&times;</button>
+    <div class="modal-icono">📢</div>
+    <h2 id="modal-titulo">Aviso importante: registro cerrado</h2>
+    <p class="modal-sub">Taller Teórico-Práctico en Turbulencia 2026<br>CIATEQ, Centro de Tecnología Avanzada</p>
+    <p>Agradecemos enormemente el gran interés de la comunidad académica y científica en nuestro evento.</p>
+    <p>Les informamos que el cupo para el Taller Teórico-Práctico en Turbulencia 2026 ha sido alcanzado en su totalidad, por lo que el proceso de inscripción queda formalmente cerrado.</p>
+    <button class="btn" onclick="cerrarAviso()">Entendido</button>
+  </div>
+</div>
 
 <nav aria-label="Navegación principal">
   <div class="marca"><img src="logo_ciateq_blanco.svg" alt="" class="logo-nav"> <span>&middot;</span> Taller Teórico-Práctico en Turbulencia 2026</div>
@@ -745,6 +789,12 @@
   <img src="logo_ciateq_blanco.svg" alt="CIATEQ A.C." class="logo-footer">
   <p>Taller Teórico-Práctico en Turbulencia 2026 <span>&middot;</span> Este proyecto se realizó con el apoyo de CIATEQ A.C. y el apoyo de la <strong> SECIHTI </strong> al proyecto <strong> CBF-2025-G-1522 </strong>. </p>
 </footer>
+
+<script>
+  function cerrarAviso(){
+    document.getElementById('modal-aviso').classList.add('oculto');
+  }
+</script>
 
 </body>
 </html>
